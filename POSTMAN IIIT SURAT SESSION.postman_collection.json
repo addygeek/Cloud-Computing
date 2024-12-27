@@ -1,0 +1,358 @@
+
+{
+	"info": {
+		"_postman_id": "3bc03ed6-da87-463f-9af2-1b328dc5fd01",
+		"name": "POSTMAN IIIT SURAT SESSION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29512727"
+	},
+	"item": [
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "get all tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"api todo\",\r\n\t\"description\": \"add auth\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"api todo\",\r\n\t\"description\": \"add auth jwt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/v1/tasks/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AWS",
+			"item": [
+				{
+					"name": "hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-43-204-97-110.ap-south-1.compute.amazonaws.com/api/v1/hello",
+							"protocol": "http",
+							"host": [
+								"ec2-43-204-97-110",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"hello"
+							]
+						},
+						"description": "this is a simple test api to show server is running\n\n### **Response**\n\n---\n\n``` json\n\"hello world\"\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "get all tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-43-204-97-110.ap-south-1.compute.amazonaws.com/api/v1/tasks",
+							"protocol": "http",
+							"host": [
+								"ec2-43-204-97-110",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						},
+						"description": "to get all tasks present in the database.\n\n``` json\n[\n    {\n        \"id\": 1,\n        \"title\": \"api todo\",\n        \"description\": \"put method\",\n        \"createdAt\": \"0001-01-01T00:00:00Z\",\n        \"updatedAt\": \"2024-09-07T12:20:57.703599Z\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"api todo\",\n        \"description\": \"add auth\",\n        \"createdAt\": \"2024-09-07T14:40:04.095088Z\",\n        \"updatedAt\": \"2024-09-07T14:40:04.095088Z\"\n    }\n]\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "get task by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-43-204-97-110.ap-south-1.compute.amazonaws.com/api/v1/tasks/1",
+							"protocol": "http",
+							"host": [
+								"ec2-43-204-97-110",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						},
+						"description": "gets particular task mentioned by id at the end of the URL\n\n`/api/v1/tasks/{id}`\n\n``` json\n{\n    \"id\": 1,\n    \"title\": \"api todo\",\n    \"description\": \"put method\",\n    \"createdAt\": \"0001-01-01T00:00:00Z\",\n    \"updatedAt\": \"2024-09-07T12:20:57.703599Z\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"api todo\",\r\n\t\"description\": \"add auth\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-43-204-97-110.ap-south-1.compute.amazonaws.com/api/v1/tasks",
+							"protocol": "http",
+							"host": [
+								"ec2-43-204-97-110",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						},
+						"description": "method to create task with the give body structure"
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-43-204-97-110.ap-south-1.compute.amazonaws.com/api/v1/tasks/2",
+							"protocol": "http",
+							"host": [
+								"ec2-43-204-97-110",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"2"
+							]
+						},
+						"description": "this method deletes particular task mentioned by id at the end of the URL\n\n`api/v1/tasks/{id}`"
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"api todo\",\r\n\t\"description\": \"put method\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-43-204-97-110.ap-south-1.compute.amazonaws.com/api/v1/tasks/1",
+							"protocol": "http",
+							"host": [
+								"ec2-43-204-97-110",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"1"
+							]
+						},
+						"description": "this is used to update task contents by providing full new body contents and id also in URL."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains collections of apis hosted on AWS"
+		}
+	]
+}
